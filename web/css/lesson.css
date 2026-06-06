@@ -1,0 +1,178 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Georgia', serif;
+    background: #f7f4ef;
+    color: #2c2c2c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 100px;
+}
+
+.back {
+    align-self: flex-start;
+    margin-left: calc(50% - 320px);
+    font-size: 0.88rem;
+    color: #888;
+    text-decoration: none;
+    margin-bottom: 36px;
+}
+.back:hover { color: #444; }
+
+h1 {
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+#lesson-content {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.lesson-segment {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #e8e3db;
+    margin-bottom: 28px;
+}
+.lesson-segment:last-child {
+    border-bottom: none;
+}
+
+/* Text */
+p { font-size: 1rem; line-height: 1.75; }
+
+/* List */
+.lesson-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 8px;
+}
+.lesson-list li::before { content: '→ '; color: #888; }
+.lesson-list li { font-size: 1rem; line-height: 1.7; }
+
+/* Pronoun table */
+.table-label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: -8px;
+}
+
+.pronoun-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.97rem;
+}
+.pronoun-table th, .pronoun-table td {
+    border: 1px solid #ccc;
+    padding: 9px 16px;
+    text-align: center;
+}
+.pronoun-table th {
+    background: #f0ece5;
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+.pronoun-table th:first-child { background: transparent; border: none; }
+.pronoun-table.no-headers td { border: 1px solid #ccc; text-align: left; padding: 9px 16px; }
+.pronoun-table.no-headers .title-row td {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 4px 4px 6px;
+    font-size: 0.92rem;
+    color: #444;
+}
+.pronoun-table.no-headers .title-row .title-right { text-align: right; }
+.pronoun-table.no-headers.centered td { text-align: center; }
+
+.pronoun-table .row-label {
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    color: #666;
+    text-align: right;
+    border: none;
+    padding-right: 12px;
+    white-space: nowrap;
+}
+
+/* Content table */
+.content-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.97rem;
+}
+.content-table td {
+    padding: 7px 12px;
+    vertical-align: top;
+    line-height: 1.6;
+}
+.content-table tr:nth-child(even) td { background: #f5f1eb; }
+
+/* Understanding check */
+.check-card {
+    background: #fff;
+    border: 1px solid #e0dbd2;
+    border-radius: 8px;
+    padding: 20px 24px;
+}
+.check-q {
+    font-size: 1rem;
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+.reveal-btn {
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    padding: 7px 18px;
+    background: transparent;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #555;
+    transition: border-color 0.15s;
+}
+.reveal-btn:hover { border-color: #555; }
+.check-answer {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #e8e3db;
+    font-size: 0.97rem;
+    line-height: 1.7;
+    color: #2a5a2a;
+}
+
+/* Next button */
+#lesson-next-btn {
+    margin-top: 36px;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    padding: 11px 36px;
+    background: #4a7c59;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+#lesson-next-btn:hover { background: #3a6347; }
+
+.lesson-done {
+    text-align: center;
+    color: #999;
+    font-family: Arial, sans-serif;
+    font-size: 0.88rem;
+    margin-top: 16px;
+}

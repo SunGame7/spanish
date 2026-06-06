@@ -1,0 +1,1 @@
+const SENTENCES_DATA = [];
